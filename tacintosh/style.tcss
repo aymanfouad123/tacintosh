@@ -1,0 +1,151 @@
+Screen {
+    background: #0e151b;
+    color: #dee6eb;
+}
+
+MenuScreen {
+    align: center middle;
+}
+
+#menu {
+    width: 100%;
+    max-width: 56;
+    height: auto;
+    padding: 1 3;
+}
+
+#menu-brand, #brand {
+    text-style: bold;
+    color: #b8f2cf;
+    height: 2;
+}
+
+#menu-sub, #menu-status, #first-list, #mode-blurb, #play-hint, #menu-hint {
+    height: 2;
+}
+
+#play-hint {
+    margin-top: 1;
+    width: 100%;
+    height: 3;
+    border: solid #b8f2cf;
+    color: #b8f2cf;
+    text-style: bold;
+    content-align: center middle;
+}
+
+#menu-hint {
+    color: #788c9a;
+}
+
+#mode-list {
+    height: 4;
+}
+
+.eyebrow {
+    color: #788c9a;
+    height: 1;
+    text-style: bold;
+    margin-top: 1;
+}
+
+#shell {
+    align: center top;
+    padding: 1 2;
+    overflow-y: auto;
+}
+
+#brand, #status, #hint, #reaction {
+    width: 100%;
+    content-align: center middle;
+}
+
+#status {
+    height: 2;
+    text-style: bold;
+}
+
+#board {
+    layout: grid;
+    grid-columns: 9;
+    grid-rows: 3;
+    grid-gutter: 0 1;
+}
+
+.size-3 #board-wrap {
+    height: 10;
+}
+
+.size-3 #board {
+    grid-size: 3 3;
+    width: 29;
+    height: 9;
+}
+
+.size-4 #board-wrap {
+    height: 13;
+}
+
+.size-4 #board {
+    grid-size: 4 4;
+    width: 39;
+    height: 12;
+}
+
+.cell {
+    background: #141f28;
+    border: solid #293944;
+    content-align: center middle;
+    color: #657786;
+}
+
+.cell:hover, .cell.selected {
+    border: solid #b8f2cf;
+}
+
+.cell.selected {
+    background: #1c302d;
+}
+
+.cell.human {
+    color: #b8f2cf;
+}
+
+.cell.model {
+    color: #b9adf5;
+}
+
+.cell.model.selected {
+    background: #292741;
+    border: solid #b9adf5;
+}
+
+.cell.oldest {
+    text-opacity: 55%;
+    border: dashed #657786;
+}
+
+.cell.winning {
+    background: #29443a;
+    border: solid #b8f2cf;
+}
+
+#hint {
+    height: 1;
+    color: #788c9a;
+}
+
+#reaction {
+    height: auto;
+    min-height: 2;
+    margin-top: 1;
+}
+
+#thinking {
+    height: 1;
+    color: #b9adf5;
+}
+
+Footer {
+    background: #141f28;
+}

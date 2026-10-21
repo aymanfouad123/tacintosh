@@ -8,9 +8,15 @@ dependencies = [
     "apple-fm-sdk>=0.2.1,<0.3",
 ]
 
+[project.scripts]
+tacintosh = "tacintosh.main:main"
+
 [build-system]
 requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 include = ["tacintosh*"]
+
+[tool.setuptools.package-data]
+tacintosh = ["*.tcss"]
