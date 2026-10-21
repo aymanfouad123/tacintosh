@@ -11,6 +11,7 @@ from textual.widgets import Footer, LoadingIndicator, Static
 
 from .game import FIRST_LABELS, MODES, Game, Mode, other
 from .model import AppleOpponent
+from .stats import load_stats, record_game
 
 MODE_KEYS = list(MODES)
 FIRST_KEYS = list(FIRST_LABELS)
@@ -61,6 +62,7 @@ class MenuScreen(Screen[None]):
             yield Static("FIRST MOVE", classes="eyebrow")
             yield Static(id="first-list")
             yield Static(id="mode-blurb")
+            yield Static(self.app.stats_text, id="stats")
             yield Static("PLAY  ·  press Enter", id="play-hint")
             yield Static("↑↓ mode   ←→ first   q quit", id="menu-hint")
         yield Footer()
@@ -115,6 +117,7 @@ class GameScreen(Screen[None]):
         self.human = "X"
         self.selected = 0
         self.busy = False
+        self.result_logged = False
 
     @property
     def app(self) -> "Tacintosh":
@@ -128,6 +131,7 @@ class GameScreen(Screen[None]):
         with Vertical(id="shell"):
             yield Static(f"tacintosh · {self.mode.label}", id="brand")
             yield Static(id="status")
+            yield Static(self.app.stats_text, id="stats")
             with Center(id="board-wrap"), Container(id="board"):
                 for index in range(len(self.game.board)):
                     yield Cell(index)
@@ -144,6 +148,7 @@ class GameScreen(Screen[None]):
     def start_round(self) -> None:
         self.workers.cancel_node(self)
         self.busy = False
+        self.result_logged = False
         self.game = Game(self.mode)
         self.selected = len(self.game.board) // 2
         first = choice(("you", "model")) if self.first == "random" else self.first
@@ -216,6 +221,16 @@ class GameScreen(Screen[None]):
                 self.refresh_board()
             result = game.result()
             if result:
+                if not self.result_logged:
+                    winner = (
+                        "draw"
+                        if result == "draw"
+                        else "you"
+                        if result == self.human
+                        else "model"
+                    )
+                    self.app.record_result(self.mode.label, winner)
+                    self.result_logged = True
                 outcome = "draw" if result == "draw" else "win" if result == self.ai else "loss"
                 self.say(f"“{await opponent.react(game, self.ai, outcome)}”")
         except Exception as exc:
@@ -260,6 +275,22 @@ class Tacintosh(App):
         super().__init__()
         self.opponent = AppleOpponent()
         self.model_error: str | None = None
+        self.stats = load_stats()
+
+    @property
+    def stats_text(self) -> str:
+        return (
+            f"record  you {self.stats['you']} · "
+            f"model {self.stats['model']} · draws {self.stats['draw']}"
+        )
+
+    def record_result(self, mode: str, result: str) -> None:
+        if not record_game(mode, result):
+            return
+        self.stats[result] += 1
+        for screen in self.screen_stack:
+            for widget in screen.query("#stats"):
+                cast(Static, widget).update(self.stats_text)
 
     def on_mount(self) -> None:
         try:
