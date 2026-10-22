@@ -1,10 +1,9 @@
 """One short, fresh Apple SDK request per move or end-of-game quip."""
 
 import asyncio
-import json
 from dataclasses import dataclass
 
-from .game import Game, other
+from .game import Game, other, winning_lines
 
 
 @dataclass(frozen=True)
@@ -13,28 +12,70 @@ class Move:
     reaction: str
 
 
-def board_payload(game: Game, mark: str) -> dict[str, object]:
-    """Describe the board using one-based square numbers for the model."""
+def board_prompt(game: Game, mark: str) -> str:
+    """Show numbered cells in their board positions, followed by legal choices."""
     size = game.size
-    cells = [cell if cell != "." else str(i + 1) for i, cell in enumerate(game.board)]
-    payload: dict[str, object] = {
-        "you": mark,
-        "opponent": other(mark),
-        "size": size,
-        "goal": f"{size} in a row (row, column, or diagonal)",
-        "rows": [cells[row * size:(row + 1) * size] for row in range(size)],
-        "empty": [i + 1 for i in game.legal_moves()],
-    }
+    lines = [
+        f"Game: {game.mode.label}",
+        f"You play {mark}. Your opponent plays {other(mark)}.",
+        f"It is {game.turn}'s turn.",
+        "Rules:",
+        "- X moves first. Players alternate placing one mark in an empty cell.",
+        "- You cannot replace an occupied cell.",
+        f"- The first player with {size} of their own marks filling one entire row, "
+        "one entire column, or either corner-to-corner diagonal wins.",
+        "- Marks from different rows, columns, or diagonals do not combine into a win.",
+    ]
     if game.mode.vanishing:
-        payload["rule"] = (
-            "Each player keeps only their three newest marks. "
-            "Place on an empty square, then remove your oldest mark if you have four. "
-            "Check for a win after removal."
+        lines.extend([
+            "- Each player keeps at most three marks. After placing a fourth mark, "
+            "remove that player's oldest mark BEFORE checking for a win.",
+            "- The cell must be empty before placing; you cannot choose the occupied "
+            "cell that will disappear on this turn.",
+        ])
+        for player in ("X", "O"):
+            squares = ", ".join(str(i + 1) for i in game.marks(player)) or "none"
+            lines.append(f"{player}'s marks, oldest to newest: {squares}.")
+    else:
+        lines.append("- If the board fills without a winner, the game is a draw.")
+
+    example_before = " | ".join([mark] * (size - 1) + ["."])
+    example_after = " | ".join([mark] * size)
+    lines.extend([
+        "",
+        "Rule examples (illustrations only; these are NOT the current board):",
+        f"- A row containing {example_before} is not yet a win: . is empty.",
+        f"- Placing {mark} in that empty cell makes {example_after}. "
+        f"That is {size} of your marks in one row, so you win if no mark is removed.",
+        f"- A row containing {other(mark)} | "
+        + " | ".join([mark] * (size - 1))
+        + " is not a win for either player: every cell must have the SAME mark.",
+        "- A square number is just an address. Only X or O counts toward a win.",
+    ])
+    if game.mode.vanishing:
+        lines.append(
+            "- Removal example: your marks are on squares 1, 2, 5, oldest first. "
+            "Placing on empty square 3 removes square 1. You now occupy 2, 5, 3. "
+            "You do NOT win the top row, because square 1 is empty again."
         )
-        payload["marks_oldest_first"] = {
-            player: [square + 1 for square in game.marks(player)] for player in ("X", "O")
-        }
-    return payload
+
+    lines.extend([
+        "",
+        f"CURRENT BOARD ({size} rows by {size} columns):",
+        "Each cell is square:contents. X and O are occupied; . means empty.",
+        "Square numbers run left to right, then top to bottom.",
+    ])
+    for row in range(size):
+        start = row * size
+        lines.append(" | ".join(
+            f"{i + 1:>2}:{game.board[i]}" for i in range(start, start + size)
+        ))
+    lines.extend(["", "Winning groups of square numbers (the same for both players):"])
+    for group in winning_lines(size):
+        lines.append(", ".join(str(i + 1) for i in group))
+    legal = ", ".join(str(i + 1) for i in game.legal_moves()) or "none"
+    lines.extend(["", f"Legal squares: {legal}."])
+    return "\n".join(lines)
 
 
 def move_schema(empty: list[int]) -> dict[str, object]:
@@ -102,7 +143,7 @@ class AppleOpponent:
     async def _respond(
         self,
         instructions: str,
-        payload: dict[str, object],
+        prompt: str,
         schema: dict[str, object],
         timeout: float,
     ) -> dict:
@@ -110,7 +151,6 @@ class AppleOpponent:
         import apple_fm_sdk as fm
 
         session = fm.LanguageModelSession(model=self.model, instructions=instructions)
-        prompt = json.dumps(payload, separators=(",", ":"))
         content = await asyncio.wait_for(
             session.respond(
                 prompt,
@@ -130,13 +170,18 @@ class AppleOpponent:
             raise ValueError("The model cannot move in this position.")
 
         reply = await self._respond(
-            f"Play {game.size}x{game.size} tic-tac-toe as {mark}. "
-            "Your objective is to win. "
-            "Empty cells show their square numbers. Choose a square. "
-            "Give a short, playful remark about your chosen move. "
-            "Keep it consistent with the board. "
-            "Avoid claims about winning, blocking, or your opponent's intentions.",
-            board_payload(game, mark),
+            "You are playing tic-tac-toe. Your objective is to win; "
+            "if you cannot win, try to draw. "
+            "Read the rules, your mark, and the current board carefully. "
+            "First look for a legal move that wins this turn. "
+            "If there is no winning move, try to prevent your opponent winning next turn. "
+            "Otherwise choose a move that helps complete a winning group. "
+            "In vanishing mode, account for the oldest mark being removed. "
+            "Choose the best move yourself from the legal squares. "
+            "Return its square number as a string in the square field. "
+            "After choosing, add a friendly remark of at most eight words "
+            "in the reaction field. Focus on the move first.",
+            board_prompt(game, mark),
             move_schema(empty),
             timeout=45,
         )
@@ -159,7 +204,7 @@ class AppleOpponent:
         reply = await self._respond(
             "You just finished a playful tic-tac-toe game. "
             "Give one short, playful remark consistent with the supplied result.",
-            {"you": mark, "result": result, "board": board_payload(game, mark)},
+            f"Your result: {result}. This game is over.\n\n{board_prompt(game, mark)}",
             REACTION_SCHEMA,
             timeout=30,
         )

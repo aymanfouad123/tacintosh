@@ -23,9 +23,9 @@ uv sync
 uv run tacintosh
 ```
 
-the model gets a structured json board and picks its own move.
+the model gets a numbered text grid, explicit rules for the selected mode, all winning groups, and a list of legal squares. the prompt asks it to prioritize winning, then preventing an immediate loss. it picks its own move and returns structured json.
 
-the code only enforces legality, wins, and vanishing-mode removal — no win/block hints.
+the code only enforces legality, wins, and vanishing-mode removal — no board-specific win/block hints or solver.
 
 the sdk connects directly to the on-device model. no api key or separate model server needed.
 
