@@ -50,7 +50,7 @@ def move_schema(empty: list[int]) -> dict[str, object]:
             },
             "reaction": {
                 "type": "string",
-                "description": "Whimsical remark, at most eight words",
+                "description": "Playful remark consistent with your chosen move, at most eight words",
             },
         },
         "required": ["square", "reaction"],
@@ -65,7 +65,7 @@ REACTION_SCHEMA = {
     "properties": {
         "reaction": {
             "type": "string",
-            "description": "Whimsical remark, at most twelve words",
+            "description": "Playful remark consistent with the supplied result, at most twelve words",
         },
     },
     "required": ["reaction"],
@@ -131,7 +131,11 @@ class AppleOpponent:
 
         reply = await self._respond(
             f"Play {game.size}x{game.size} tic-tac-toe as {mark}. "
-            "Empty cells show their square numbers. Choose a square and give a short reaction.",
+            "Your objective is to win. "
+            "Empty cells show their square numbers. Choose a square. "
+            "Give a short, playful remark about your chosen move. "
+            "Keep it consistent with the board. "
+            "Avoid claims about winning, blocking, or your opponent's intentions.",
             board_payload(game, mark),
             move_schema(empty),
             timeout=45,
@@ -154,7 +158,7 @@ class AppleOpponent:
     async def react(self, game: Game, mark: str, result: str) -> str:
         reply = await self._respond(
             "You just finished a playful tic-tac-toe game. "
-            "Answer with one short whimsical line about the result.",
+            "Give one short, playful remark consistent with the supplied result.",
             {"you": mark, "result": result, "board": board_payload(game, mark)},
             REACTION_SCHEMA,
             timeout=30,
