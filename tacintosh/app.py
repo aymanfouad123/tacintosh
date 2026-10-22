@@ -177,12 +177,14 @@ class GameScreen(Screen[None]):
         game = self.game
         result = game.result()
         line = game.winning_line()
+        latest = {marks[-1] for mark in ("X", "O") if (marks := game.marks(mark))}
         for i, mark in enumerate(game.board):
             cell = self.query_one(f"#cell-{i}", Cell)
             cell.set_class(i == self.selected and not self.busy and not result, "selected")
             cell.set_class(i in line, "winning")
             cell.set_class(mark == self.human, "human")
             cell.set_class(mark == self.ai, "model")
+            cell.set_class(i in latest, "latest")
             cell.set_class(mark != "." and i == game.next_to_vanish(mark), "oldest")
             cell.update(mark if mark != "." else str(i + 1))
 

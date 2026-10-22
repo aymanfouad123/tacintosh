@@ -122,7 +122,12 @@ MenuScreen {
     color: #b9adf5;
 }
 
-.cell.model.selected {
+.cell.human.latest {
+    background: #1c302d;
+    border: solid #b8f2cf;
+}
+
+.cell.model.selected, .cell.model.latest {
     background: #292741;
     border: solid #b9adf5;
 }
@@ -132,7 +137,7 @@ MenuScreen {
     border: dashed #657786;
 }
 
-.cell.winning {
+.cell.winning, .cell.latest.winning, .cell.model.selected.winning {
     background: #29443a;
     border: solid #b8f2cf;
 }
