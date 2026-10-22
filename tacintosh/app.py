@@ -316,12 +316,17 @@ class Tacintosh(App):
         )
 
     def record_result(self, mode: str, result: str) -> None:
-        if not record_game(mode, result):
-            return
+        saved = record_game(mode, result)
         self.stats[result] += 1
         for screen in self.screen_stack:
             for widget in screen.query("#stats"):
                 cast(Static, widget).update(self.stats_text)
+
+        if not saved:
+            self.notify(
+                "Result counted for this session, but couldn't be saved",
+                severity="warning",
+            )
 
     def on_mount(self) -> None:
         try:

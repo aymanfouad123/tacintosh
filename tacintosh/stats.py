@@ -8,32 +8,47 @@ LOG_PATH = Path.home() / "Library" / "Application Support" / "tacintosh" / "game
 RESULTS = ("you", "model", "draw")
 
 
-def load_stats() -> dict[str, int]:
+def load_stats(path: Path | None = None) -> dict[str, int]:
     stats = {result: 0 for result in RESULTS}
-    try:
-        lines = LOG_PATH.read_text().splitlines()
-    except OSError:
-        return stats
+    path = LOG_PATH if path is None else path
 
-    for line in lines:
-        try:
-            result = json.loads(line)["result"]
-        except (json.JSONDecodeError, KeyError, TypeError):
-            continue
-        if result in stats:
-            stats[result] += 1
+    try:
+        with path.open(encoding="utf-8", errors="replace") as log:
+            for line in log:
+                try:
+                    entry = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+
+                if not isinstance(entry, dict):
+                    continue
+
+                result = entry.get("result")
+                if isinstance(result, str) and result in stats:
+                    stats[result] += 1
+    except OSError:
+        pass
+
     return stats
 
 
-def record_game(mode: str, result: str) -> bool:
+def record_game(
+    mode: str,
+    result: str,
+    path: Path | None = None,
+) -> bool:
+    if result not in RESULTS:
+        raise ValueError(f"Unknown result: {result}")
+
+    path = LOG_PATH if path is None else path
     entry = {
         "played_at": datetime.now(UTC).isoformat(timespec="seconds"),
         "mode": mode,
         "result": result,
     }
     try:
-        LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
-        with LOG_PATH.open("a") as log:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with path.open("a", encoding="utf-8") as log:
             json.dump(entry, log, separators=(",", ":"))
             log.write("\n")
     except OSError:
