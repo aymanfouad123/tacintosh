@@ -1,4 +1,7 @@
 """Textual interface: start menu + game board."""
+
+from __future__ import annotations
+
 from random import choice
 from typing import ClassVar, cast
 
@@ -34,10 +37,13 @@ class Cell(Static):
 
 
 class MenuScreen(Screen[None]):
+    app: Tacintosh
+
     BINDINGS: ClassVar[list[BindingType]] = [
         Binding("up", "move_mode(-1)", show=False),
         Binding("down", "move_mode(1)", show=False),
-        Binding("left,right,tab", "toggle_first", show=False),
+        Binding("left", "move_first(-1)", show=False),
+        Binding("right,tab", "move_first(1)", show=False),
         Binding("enter,space", "start", "Play"),
         Binding("q", "app.quit", "Quit"),
     ]
@@ -46,10 +52,6 @@ class MenuScreen(Screen[None]):
         super().__init__()
         self.mode_index = 0
         self.first_index = 0
-
-    @property
-    def app(self) -> "Tacintosh":
-        return cast("Tacintosh", super().app)
 
     def compose(self) -> ComposeResult:
         error = self.app.model_error
@@ -84,19 +86,30 @@ class MenuScreen(Screen[None]):
         self.mode_index = (self.mode_index + delta) % len(MODE_KEYS)
         self.refresh_menu()
 
-    def action_toggle_first(self) -> None:
-        self.first_index = (self.first_index + 1) % len(FIRST_KEYS)
+    def action_move_first(self, delta: int) -> None:
+        self.first_index = (self.first_index + delta) % len(FIRST_KEYS)
         self.refresh_menu()
 
     def action_start(self) -> None:
-        if self.app.model_error:
-            self.notify("Model unavailable. Check Apple Intelligence in Settings.")
+        # Availability can change after the model download finishes.
+        try:
+            self.app.opponent.ensure_ready()
+        except Exception as exc:
+            self.query_one("#menu-status", Static).update(
+                f"Model unavailable: {exc}"
+            )
             return
+
+        self.app.model_error = None
+        self.query_one("#menu-status", Static).update("")
+
         mode = MODES[MODE_KEYS[self.mode_index]]
         self.app.push_screen(GameScreen(mode, FIRST_KEYS[self.first_index]))
 
 
 class GameScreen(Screen[None]):
+    app: Tacintosh
+
     BINDINGS: ClassVar[list[BindingType]] = [
         Binding("up", "navigate(-1, 0)", show=False),
         Binding("down", "navigate(1, 0)", show=False),
@@ -118,10 +131,7 @@ class GameScreen(Screen[None]):
         self.selected = 0
         self.busy = False
         self.result_logged = False
-
-    @property
-    def app(self) -> "Tacintosh":
-        return cast("Tacintosh", super().app)
+        self.round_id = 0
 
     @property
     def ai(self) -> str:
@@ -146,6 +156,7 @@ class GameScreen(Screen[None]):
         self.start_round()
 
     def start_round(self) -> None:
+        self.round_id += 1
         self.workers.cancel_node(self)
         self.busy = False
         self.result_logged = False
@@ -207,14 +218,19 @@ class GameScreen(Screen[None]):
     def start_model_turn(self) -> None:
         self.busy = True
         self.refresh_board()
-        self.run_worker(self.model_turn(), exclusive=True)
+        self.run_worker(self.model_turn(self.round_id), exclusive=True)
 
-    async def model_turn(self) -> None:
+    async def model_turn(self, round_id: int) -> None:
+        if round_id != self.round_id:
+            return
         opponent = self.app.opponent
         game = self.game
         try:
             if not game.result():
                 move = await opponent.choose(game, self.ai)
+                if round_id != self.round_id:
+                    return
+
                 game.play(move.square, self.ai)
                 self.selected = move.square
                 self.say(f"“{move.reaction}”")
@@ -232,11 +248,23 @@ class GameScreen(Screen[None]):
                     self.app.record_result(self.mode.label, winner)
                     self.result_logged = True
                 outcome = "draw" if result == "draw" else "win" if result == self.ai else "loss"
-                self.say(f"“{await opponent.react(game, self.ai, outcome)}”")
+                try:
+                    reaction = await opponent.react(game, self.ai, outcome)
+                except Exception:
+                    # The result is recorded; the final quip is optional.
+                    reaction = "Good game."
+
+                if round_id != self.round_id:
+                    return
+                self.say(f"“{reaction}”")
         except Exception as exc:
-            self.say(f"Model error: {str(exc) or type(exc).__name__}")
-        self.busy = False
-        self.refresh_board()
+            if round_id == self.round_id:
+                self.say(f"Model error: {str(exc) or type(exc).__name__}")
+        finally:
+            # A cancelled native request must never update a newer round.
+            if round_id == self.round_id:
+                self.busy = False
+                self.refresh_board()
 
     def action_navigate(self, rows: int, columns: int) -> None:
         size = self.mode.size
@@ -251,6 +279,7 @@ class GameScreen(Screen[None]):
         self.start_round()
 
     def action_menu(self) -> None:
+        self.round_id += 1
         self.workers.cancel_node(self)
         self.app.pop_screen()
 
@@ -262,8 +291,10 @@ class GameScreen(Screen[None]):
         key = (event.character or "").lower()
         if key and key in "123456789":
             self.play(int(key) - 1)
+            event.stop()
         elif self.mode.size == 4 and key and key in "abcdefg":
             self.play(9 + ord(key) - ord("a"))
+            event.stop()
 
 
 class Tacintosh(App):
