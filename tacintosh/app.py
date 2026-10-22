@@ -10,6 +10,7 @@ from textual.app import App, ComposeResult
 from textual.binding import Binding, BindingType
 from textual.containers import Center, Container, Horizontal, Vertical
 from textual.screen import Screen
+from textual.worker import get_current_worker
 from textual.widgets import Footer, LoadingIndicator, Static
 
 from .game import FIRST_LABELS, MODES, Game, Mode, other
@@ -229,14 +230,23 @@ class GameScreen(Screen[None]):
         self.run_worker(self.model_turn(self.round_id), exclusive=True)
 
     async def model_turn(self, round_id: int) -> None:
-        if round_id != self.round_id:
+        worker = get_current_worker()
+
+        def is_current() -> bool:
+            return (
+                round_id == self.round_id
+                and not worker.is_cancelled
+                and self.is_attached
+            )
+
+        if not is_current():
             return
         opponent = self.app.opponent
         game = self.game
         try:
             if not game.result():
                 move = await opponent.choose(game, self.ai)
-                if round_id != self.round_id:
+                if not is_current():
                     return
 
                 game.play(move.square, self.ai)
@@ -262,15 +272,16 @@ class GameScreen(Screen[None]):
                     # The result is recorded; the final quip is optional.
                     reaction = "Good game."
 
-                if round_id != self.round_id:
+                if not is_current():
                     return
                 self.say(f"“{reaction}”")
         except Exception as exc:
-            if round_id == self.round_id:
+            if is_current():
                 self.say(f"Model error: {str(exc) or type(exc).__name__}")
         finally:
-            # A cancelled native request must never update a newer round.
-            if round_id == self.round_id:
+            # Unmount cancels workers after removing their screen's children.
+            # Preserve cancellation instead of querying the removed board.
+            if is_current():
                 self.busy = False
                 self.refresh_board()
 
