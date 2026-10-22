@@ -27,7 +27,11 @@ def board_payload(game: Game, mark: str) -> dict[str, object]:
         "empty": [i + 1 for i in game.legal_moves()],
     }
     if game.mode.vanishing:
-        payload["rule"] = "each player keeps only their 3 newest marks"
+        payload["rule"] = (
+            "Each player keeps only their three newest marks. "
+            "Place on an empty square, then remove your oldest mark if you have four. "
+            "Check for a win after removal."
+        )
         payload["marks_oldest_first"] = {
             player: [square + 1 for square in game.marks(player)] for player in ("X", "O")
         }

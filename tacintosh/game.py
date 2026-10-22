@@ -1,4 +1,5 @@
 """Modes and rules. The language model never decides legality or the winner."""
+
 from dataclasses import dataclass, field
 
 
@@ -39,11 +40,12 @@ def winning_lines(size: int) -> list[tuple[int, ...]]:
 
 @dataclass
 class Game:
-    """Board plus every square each player has played, oldest first. X moves first."""
+    """Board and each player's active marks, oldest first. X moves first."""
 
     mode: Mode
     board: list[str] = field(init=False)
     history: dict[str, list[int]] = field(init=False)
+    turn: str = field(init=False, default="X")
 
     def __post_init__(self) -> None:
         self.board = ["."] * (self.size * self.size)
@@ -52,10 +54,6 @@ class Game:
     @property
     def size(self) -> int:
         return self.mode.size
-
-    @property
-    def turn(self) -> str:
-        return "X" if len(self.history["X"]) == len(self.history["O"]) else "O"
 
     def legal_moves(self) -> list[int]:
         return [i for i, mark in enumerate(self.board) if mark == "."]
@@ -76,7 +74,7 @@ class Game:
 
     def marks(self, mark: str) -> list[int]:
         """Squares this player holds, oldest first."""
-        return self.history[mark][-3:] if self.mode.vanishing else self.history[mark]
+        return self.history[mark].copy()
 
     def next_to_vanish(self, mark: str) -> int | None:
         """The square this player loses on their next move in vanishing mode."""
@@ -86,8 +84,12 @@ class Game:
     def play(self, square: int, mark: str) -> None:
         if self.result() or mark != self.turn or square not in self.legal_moves():
             raise ValueError("Illegal move")
-        vanishing = self.next_to_vanish(mark)
-        if vanishing is not None:
-            self.board[vanishing] = "."
+
         self.board[square] = mark
         self.history[mark].append(square)
+
+        if self.mode.vanishing and len(self.history[mark]) > 3:
+            oldest = self.history[mark].pop(0)
+            self.board[oldest] = "."
+
+        self.turn = other(mark)

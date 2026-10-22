@@ -182,12 +182,12 @@ class GameScreen(Screen[None]):
         elif self.busy:
             status = (
                 "Model goes first · thinking…"
-                if not game.history["X"]
+                if "X" not in game.board
                 else "Model thinking…"
             )
         elif game.turn == self.ai:
             status = "Model paused. Press r to retry."
-        elif not game.history["X"]:
+        elif "X" not in game.board:
             status = "You go first · your move."
         else:
             status = "Your move."
