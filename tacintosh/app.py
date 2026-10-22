@@ -8,7 +8,7 @@ from typing import ClassVar, cast
 from textual import events
 from textual.app import App, ComposeResult
 from textual.binding import Binding, BindingType
-from textual.containers import Center, Container, Vertical
+from textual.containers import Center, Container, Horizontal, Vertical
 from textual.screen import Screen
 from textual.widgets import Footer, LoadingIndicator, Static
 
@@ -60,10 +60,13 @@ class MenuScreen(Screen[None]):
             yield Static("tic-tac-toe · Apple Foundation Models", id="menu-sub")
             yield Static(f"Model unavailable  {error}" if error else "", id="menu-status", markup=False)
             yield Static("MODE", classes="eyebrow")
-            yield Static(id="mode-list")
+            with Vertical(id="mode-list"):
+                for key in MODE_KEYS:
+                    with Horizontal(classes="mode-option"):
+                        yield Static(id=f"mode-{key}", classes="mode-label")
+                        yield Static(MODES[key].description, classes="mode-description")
             yield Static("FIRST MOVE", classes="eyebrow")
             yield Static(id="first-list")
-            yield Static(id="mode-blurb")
             yield Static(self.app.stats_text, id="stats")
             yield Static("PLAY  ·  press Enter", id="play-hint")
             yield Static("↑↓ mode   ←→ first   q quit", id="menu-hint")
@@ -73,14 +76,14 @@ class MenuScreen(Screen[None]):
         self.refresh_menu()
 
     def refresh_menu(self) -> None:
-        mode = MODES[MODE_KEYS[self.mode_index]]
-        self.query_one("#mode-list", Static).update(
-            _options([MODES[key].label for key in MODE_KEYS], self.mode_index)
-        )
+        for i, key in enumerate(MODE_KEYS):
+            label = MODES[key].label
+            self.query_one(f"#mode-{key}", Static).update(
+                f"[bold #b8f2cf]› {label}[/]" if i == self.mode_index else f"  {label}"
+            )
         self.query_one("#first-list", Static).update(
             _options(list(FIRST_LABELS.values()), self.first_index, sep="  ")
         )
-        self.query_one("#mode-blurb", Static).update(mode.description)
 
     def action_move_mode(self, delta: int) -> None:
         self.mode_index = (self.mode_index + delta) % len(MODE_KEYS)

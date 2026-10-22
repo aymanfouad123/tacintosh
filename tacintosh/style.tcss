@@ -9,7 +9,7 @@ MenuScreen {
 
 #menu {
     width: 100%;
-    max-width: 56;
+    max-width: 100;
     height: auto;
     padding: 1 3;
 }
@@ -20,7 +20,7 @@ MenuScreen {
     height: 2;
 }
 
-#menu-sub, #menu-status, #first-list, #mode-blurb, #play-hint, #menu-hint {
+#menu-sub, #menu-status, #first-list, #play-hint, #menu-hint {
     height: 2;
 }
 
@@ -46,7 +46,23 @@ MenuScreen {
 }
 
 #mode-list {
-    height: 4;
+    height: auto;
+}
+
+.mode-option {
+    height: auto;
+    margin-bottom: 1;
+}
+
+.mode-label {
+    width: 19;
+    height: auto;
+}
+
+.mode-description {
+    width: 1fr;
+    height: auto;
+    color: #788c9a;
 }
 
 .eyebrow {
