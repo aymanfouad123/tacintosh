@@ -1,0 +1,33 @@
+{
+  "captured_at_utc": "2026-10-22T00:53:40.318748+00:00",
+  "source": "Aggregate of the app local completed-game log; no individual game records copied.",
+  "scope": "Informal human play across evolving prompts. Opponent skill, first player, prompt version and model build are not recorded per game. Unfinished games are not counted.",
+  "completed_games": 9,
+  "model_wins": 0,
+  "model_losses": 8,
+  "draws": 1,
+  "ignored_invalid_entries": 0,
+  "by_mode": [
+    {
+      "mode": "Big 4×4",
+      "completed_games": 1,
+      "model_wins": 0,
+      "model_losses": 1,
+      "draws": 0
+    },
+    {
+      "mode": "Classic 3×3",
+      "completed_games": 5,
+      "model_wins": 0,
+      "model_losses": 4,
+      "draws": 1
+    },
+    {
+      "mode": "Vanishing 3×3",
+      "completed_games": 3,
+      "model_wins": 0,
+      "model_losses": 3,
+      "draws": 0
+    }
+  ]
+}

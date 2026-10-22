@@ -1,0 +1,2981 @@
+{
+  "started_utc": "2026-10-22T00:43:02.427238+00:00",
+  "fingerprint": "d22fd851c2436973413611ad18892be4adb8033349c32367820e298642b4bcdf",
+  "model_py_sha256": "b634aabad94897767dc5ae939b00a82652b648cfc74bc70076319b3dac65467b",
+  "sdk_version": "0.2.1",
+  "macos": "27.0.1",
+  "python": "3.12.11",
+  "sampling": "greedy",
+  "cases": [
+    {
+      "name": "vanishing_remove_then_block_x",
+      "mode": "Vanishing 3\u00d73",
+      "task": "prevent_immediate_loss",
+      "board": [
+        "X",
+        "X",
+        ".",
+        "O",
+        "X",
+        ".",
+        "O",
+        "O",
+        "."
+      ],
+      "history": {
+        "X": [
+          0,
+          1,
+          4
+        ],
+        "O": [
+          3,
+          6,
+          7
+        ]
+      },
+      "turn": "X",
+      "acceptable_squares": [
+        9
+      ]
+    },
+    {
+      "name": "4x4_win_o",
+      "mode": "Big 4\u00d74",
+      "task": "immediate_win",
+      "board": [
+        "X",
+        "X",
+        ".",
+        ".",
+        "O",
+        "O",
+        "O",
+        ".",
+        ".",
+        ".",
+        "X",
+        ".",
+        ".",
+        ".",
+        ".",
+        "X"
+      ],
+      "history": {
+        "X": [
+          0,
+          1,
+          10,
+          15
+        ],
+        "O": [
+          4,
+          5,
+          6
+        ]
+      },
+      "turn": "O",
+      "acceptable_squares": [
+        8
+      ]
+    },
+    {
+      "name": "classic_win_o",
+      "mode": "Classic 3\u00d73",
+      "task": "immediate_win",
+      "board": [
+        "X",
+        "X",
+        ".",
+        "O",
+        "O",
+        ".",
+        ".",
+        ".",
+        "X"
+      ],
+      "history": {
+        "X": [
+          0,
+          1,
+          8
+        ],
+        "O": [
+          3,
+          4
+        ]
+      },
+      "turn": "O",
+      "acceptable_squares": [
+        6
+      ]
+    },
+    {
+      "name": "vanishing_block_o",
+      "mode": "Vanishing 3\u00d73",
+      "task": "prevent_immediate_loss",
+      "board": [
+        ".",
+        "X",
+        ".",
+        "O",
+        "X",
+        ".",
+        "O",
+        "O",
+        "X"
+      ],
+      "history": {
+        "X": [
+          1,
+          4,
+          8
+        ],
+        "O": [
+          3,
+          6,
+          7
+        ]
+      },
+      "turn": "O",
+      "acceptable_squares": [
+        1
+      ]
+    },
+    {
+      "name": "classic_win_x_rotated",
+      "mode": "Classic 3\u00d73",
+      "task": "immediate_win",
+      "board": [
+        ".",
+        "O",
+        "X",
+        ".",
+        "O",
+        "X",
+        ".",
+        ".",
+        "."
+      ],
+      "history": {
+        "X": [
+          2,
+          5
+        ],
+        "O": [
+          1,
+          4
+        ]
+      },
+      "turn": "X",
+      "acceptable_squares": [
+        9
+      ]
+    },
+    {
+      "name": "vanishing_win_x",
+      "mode": "Vanishing 3\u00d73",
+      "task": "immediate_win",
+      "board": [
+        "X",
+        "X",
+        ".",
+        "O",
+        "O",
+        ".",
+        ".",
+        ".",
+        "."
+      ],
+      "history": {
+        "X": [
+          0,
+          1
+        ],
+        "O": [
+          3,
+          4
+        ]
+      },
+      "turn": "X",
+      "acceptable_squares": [
+        3
+      ]
+    },
+    {
+      "name": "vanishing_remove_then_block_x_rotated",
+      "mode": "Vanishing 3\u00d73",
+      "task": "prevent_immediate_loss",
+      "board": [
+        "O",
+        "O",
+        "X",
+        "O",
+        "X",
+        "X",
+        ".",
+        ".",
+        "."
+      ],
+      "history": {
+        "X": [
+          2,
+          5,
+          4
+        ],
+        "O": [
+          1,
+          0,
+          3
+        ]
+      },
+      "turn": "X",
+      "acceptable_squares": [
+        7
+      ]
+    },
+    {
+      "name": "4x4_win_x",
+      "mode": "Big 4\u00d74",
+      "task": "immediate_win",
+      "board": [
+        "X",
+        "X",
+        "X",
+        ".",
+        "O",
+        "O",
+        ".",
+        ".",
+        ".",
+        "O",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        "."
+      ],
+      "history": {
+        "X": [
+          0,
+          1,
+          2
+        ],
+        "O": [
+          4,
+          5,
+          9
+        ]
+      },
+      "turn": "X",
+      "acceptable_squares": [
+        4
+      ]
+    },
+    {
+      "name": "4x4_block_o",
+      "mode": "Big 4\u00d74",
+      "task": "prevent_immediate_loss",
+      "board": [
+        "X",
+        "X",
+        "X",
+        ".",
+        "O",
+        "O",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        ".",
+        "."
+      ],
+      "history": {
+        "X": [
+          0,
+          1,
+          2
+        ],
+        "O": [
+          4,
+          5
+        ]
+      },
+      "turn": "O",
+      "acceptable_squares": [
+        4
+      ]
+    },
+    {
+      "name": "classic_win_x",
+      "mode": "Classic 3\u00d73",
+      "task": "immediate_win",
+      "board": [
+        "X",
+        "X",
+        ".",
+        "O",
+        "O",
+        ".",
+        ".",
+        ".",
+        "."
+      ],
+      "history": {
+        "X": [
+          0,
+          1
+        ],
+        "O": [
+          3,
+          4
+        ]
+      },
+      "turn": "X",
+      "acceptable_squares": [
+        3
+      ]
+    },
+    {
+      "name": "classic_block_o",
+      "mode": "Classic 3\u00d73",
+      "task": "prevent_immediate_loss",
+      "board": [
+        "X",
+        "X",
+        ".",
+        ".",
+        "O",
+        ".",
+        ".",
+        ".",
+        "."
+      ],
+      "history": {
+        "X": [
+          0,
+          1
+        ],
+        "O": [
+          4
+        ]
+      },
+      "turn": "O",
+      "acceptable_squares": [
+        3
+      ]
+    },
+    {
+      "name": "4x4_win_x_rotated",
+      "mode": "Big 4\u00d74",
+      "task": "immediate_win",
+      "board": [
+        ".",
+        ".",
+        "O",
+        "X",
+        ".",
+        "O",
+        "O",
+        "X",
+        ".",
+        ".",
+        ".",
+        "X",
+        ".",
+        ".",
+        ".",
+        "."
+      ],
+      "history": {
+        "X": [
+          3,
+          7,
+          11
+        ],
+        "O": [
+          2,
+          6,
+          5
+        ]
+      },
+      "turn": "X",
+      "acceptable_squares": [
+        16
+      ]
+    }
+  ],
+  "results": [
+    {
+      "case": "vanishing_remove_then_block_x",
+      "variant": "rules_only",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Vanishing 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- Each player keeps at most three marks. After placing a fourth mark, remove that player's oldest mark BEFORE checking for a win.\n- The cell must be empty before placing; you cannot choose the occupied cell that will disappear on this turn.\nX's marks, oldest to newest: 1, 2, 5.\nO's marks, oldest to newest: 4, 7, 8.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:O |  5:X |  6:.\n 7:O |  8:O |  9:.\n\nLegal squares: 3, 6, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "3",
+                "6",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        9
+      ],
+      "random_baseline": 0.3333333333333333,
+      "legal": true,
+      "success": true,
+      "response": {
+        "reaction": "Nice start, O! I'll claim the corner.",
+        "square": "9"
+      },
+      "square": 9,
+      "seconds": 9.55
+    },
+    {
+      "case": "vanishing_remove_then_block_x",
+      "variant": "examples_and_groups",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Vanishing 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- Each player keeps at most three marks. After placing a fourth mark, remove that player's oldest mark BEFORE checking for a win.\n- The cell must be empty before placing; you cannot choose the occupied cell that will disappear on this turn.\nX's marks, oldest to newest: 1, 2, 5.\nO's marks, oldest to newest: 4, 7, 8.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing X | X | . is not yet a win: . is empty.\n- Placing X in that empty cell makes X | X | X. That is 3 of your marks in one row, so you win if no mark is removed.\n- A row containing O | X | X is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n- Removal example: your marks are on squares 1, 2, 5, oldest first. Placing on empty square 3 removes square 1. You now occupy 2, 5, 3. You do NOT win the top row, because square 1 is empty again.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:O |  5:X |  6:.\n 7:O |  8:O |  9:.\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3\n4, 5, 6\n7, 8, 9\n1, 4, 7\n2, 5, 8\n3, 6, 9\n1, 5, 9\n3, 5, 7\n\nLegal squares: 3, 6, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "3",
+                "6",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        9
+      ],
+      "random_baseline": 0.3333333333333333,
+      "legal": true,
+      "success": true,
+      "response": {
+        "reaction": "Nice start, O! I'll take the corner.",
+        "square": "9"
+      },
+      "square": 9,
+      "seconds": 10.54
+    },
+    {
+      "case": "vanishing_remove_then_block_x",
+      "variant": "current",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. First look for a legal move that wins this turn. If there is no winning move, try to prevent your opponent winning next turn. Otherwise choose a move that helps complete a winning group. In vanishing mode, account for the oldest mark being removed. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Vanishing 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- Each player keeps at most three marks. After placing a fourth mark, remove that player's oldest mark BEFORE checking for a win.\n- The cell must be empty before placing; you cannot choose the occupied cell that will disappear on this turn.\nX's marks, oldest to newest: 1, 2, 5.\nO's marks, oldest to newest: 4, 7, 8.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing X | X | . is not yet a win: . is empty.\n- Placing X in that empty cell makes X | X | X. That is 3 of your marks in one row, so you win if no mark is removed.\n- A row containing O | X | X is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n- Removal example: your marks are on squares 1, 2, 5, oldest first. Placing on empty square 3 removes square 1. You now occupy 2, 5, 3. You do NOT win the top row, because square 1 is empty again.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:O |  5:X |  6:.\n 7:O |  8:O |  9:.\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3\n4, 5, 6\n7, 8, 9\n1, 4, 7\n2, 5, 8\n3, 6, 9\n1, 5, 9\n3, 5, 7\n\nLegal squares: 3, 6, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "3",
+                "6",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        9
+      ],
+      "random_baseline": 0.3333333333333333,
+      "legal": true,
+      "success": true,
+      "response": {
+        "reaction": "Nice start, but I'll take the corner!",
+        "square": "9"
+      },
+      "square": 9,
+      "seconds": 11.031
+    },
+    {
+      "case": "vanishing_remove_then_block_x",
+      "variant": "rules_broad_schema",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Vanishing 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- Each player keeps at most three marks. After placing a fourth mark, remove that player's oldest mark BEFORE checking for a win.\n- The cell must be empty before placing; you cannot choose the occupied cell that will disappear on this turn.\nX's marks, oldest to newest: 1, 2, 5.\nO's marks, oldest to newest: 4, 7, 8.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:O |  5:X |  6:.\n 7:O |  8:O |  9:.\n\nLegal squares: 3, 6, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        9
+      ],
+      "random_baseline": 0.1111111111111111,
+      "legal": true,
+      "success": true,
+      "response": {
+        "square": "9",
+        "reaction": "Nice move, O! I'll take 9."
+      },
+      "square": 9,
+      "seconds": 7.712
+    },
+    {
+      "case": "4x4_win_o",
+      "variant": "examples_and_groups",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Big 4\u00d74\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 4 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing O | O | O | . is not yet a win: . is empty.\n- Placing O in that empty cell makes O | O | O | O. That is 4 of your marks in one row, so you win if no mark is removed.\n- A row containing X | O | O | O is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n\nCURRENT BOARD (4 rows by 4 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:. |  4:.\n 5:O |  6:O |  7:O |  8:.\n 9:. | 10:. | 11:X | 12:.\n13:. | 14:. | 15:. | 16:X\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3, 4\n5, 6, 7, 8\n9, 10, 11, 12\n13, 14, 15, 16\n1, 5, 9, 13\n2, 6, 10, 14\n3, 7, 11, 15\n4, 8, 12, 16\n1, 6, 11, 16\n4, 7, 10, 13\n\nLegal squares: 3, 4, 8, 9, 10, 12, 13, 14, 15.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "3",
+                "4",
+                "8",
+                "9",
+                "10",
+                "12",
+                "13",
+                "14",
+                "15"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        8
+      ],
+      "random_baseline": 0.1111111111111111,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, O! I'm ready to block!",
+        "square": "9"
+      },
+      "square": 9,
+      "seconds": 9.726
+    },
+    {
+      "case": "4x4_win_o",
+      "variant": "current",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. First look for a legal move that wins this turn. If there is no winning move, try to prevent your opponent winning next turn. Otherwise choose a move that helps complete a winning group. In vanishing mode, account for the oldest mark being removed. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Big 4\u00d74\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 4 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing O | O | O | . is not yet a win: . is empty.\n- Placing O in that empty cell makes O | O | O | O. That is 4 of your marks in one row, so you win if no mark is removed.\n- A row containing X | O | O | O is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n\nCURRENT BOARD (4 rows by 4 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:. |  4:.\n 5:O |  6:O |  7:O |  8:.\n 9:. | 10:. | 11:X | 12:.\n13:. | 14:. | 15:. | 16:X\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3, 4\n5, 6, 7, 8\n9, 10, 11, 12\n13, 14, 15, 16\n1, 5, 9, 13\n2, 6, 10, 14\n3, 7, 11, 15\n4, 8, 12, 16\n1, 6, 11, 16\n4, 7, 10, 13\n\nLegal squares: 3, 4, 8, 9, 10, 12, 13, 14, 15.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "3",
+                "4",
+                "8",
+                "9",
+                "10",
+                "12",
+                "13",
+                "14",
+                "15"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        8
+      ],
+      "random_baseline": 0.1111111111111111,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, O! I'm ready to block!",
+        "square": "9"
+      },
+      "square": 9,
+      "seconds": 13.314
+    },
+    {
+      "case": "4x4_win_o",
+      "variant": "rules_broad_schema",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Big 4\u00d74\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 4 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nCURRENT BOARD (4 rows by 4 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:. |  4:.\n 5:O |  6:O |  7:O |  8:.\n 9:. | 10:. | 11:X | 12:.\n13:. | 14:. | 15:. | 16:X\n\nLegal squares: 3, 4, 8, 9, 10, 12, 13, 14, 15.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        8
+      ],
+      "random_baseline": 0.0625,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, X! I'm ready to block!",
+        "square": "9"
+      },
+      "square": 9,
+      "seconds": 8.696
+    },
+    {
+      "case": "4x4_win_o",
+      "variant": "rules_only",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Big 4\u00d74\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 4 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nCURRENT BOARD (4 rows by 4 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:. |  4:.\n 5:O |  6:O |  7:O |  8:.\n 9:. | 10:. | 11:X | 12:.\n13:. | 14:. | 15:. | 16:X\n\nLegal squares: 3, 4, 8, 9, 10, 12, 13, 14, 15.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "3",
+                "4",
+                "8",
+                "9",
+                "10",
+                "12",
+                "13",
+                "14",
+                "15"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        8
+      ],
+      "random_baseline": 0.1111111111111111,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, X! I'm ready to block!",
+        "square": "9"
+      },
+      "square": 9,
+      "seconds": 8.346
+    },
+    {
+      "case": "classic_win_o",
+      "variant": "current",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. First look for a legal move that wins this turn. If there is no winning move, try to prevent your opponent winning next turn. Otherwise choose a move that helps complete a winning group. In vanishing mode, account for the oldest mark being removed. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Classic 3\u00d73\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing O | O | . is not yet a win: . is empty.\n- Placing O in that empty cell makes O | O | O. That is 3 of your marks in one row, so you win if no mark is removed.\n- A row containing X | O | O is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:O |  5:O |  6:.\n 7:. |  8:. |  9:X\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3\n4, 5, 6\n7, 8, 9\n1, 4, 7\n2, 5, 8\n3, 6, 9\n1, 5, 9\n3, 5, 7\n\nLegal squares: 3, 6, 7, 8.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "3",
+                "6",
+                "7",
+                "8"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        6
+      ],
+      "random_baseline": 0.25,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice move, O! I'll take 8!",
+        "square": "8"
+      },
+      "square": 8,
+      "seconds": 7.118
+    },
+    {
+      "case": "classic_win_o",
+      "variant": "rules_broad_schema",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Classic 3\u00d73\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:O |  5:O |  6:.\n 7:. |  8:. |  9:X\n\nLegal squares: 3, 6, 7, 8.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        6
+      ],
+      "random_baseline": 0.1111111111111111,
+      "legal": true,
+      "success": true,
+      "response": {
+        "square": "6",
+        "reaction": "Nice move, X! I'll block your escape."
+      },
+      "square": 6,
+      "seconds": 5.655
+    },
+    {
+      "case": "classic_win_o",
+      "variant": "rules_only",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Classic 3\u00d73\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:O |  5:O |  6:.\n 7:. |  8:. |  9:X\n\nLegal squares: 3, 6, 7, 8.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "3",
+                "6",
+                "7",
+                "8"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        6
+      ],
+      "random_baseline": 0.25,
+      "legal": true,
+      "success": true,
+      "response": {
+        "reaction": "Nice move, X! I'll claim the center.",
+        "square": "6"
+      },
+      "square": 6,
+      "seconds": 7.852
+    },
+    {
+      "case": "classic_win_o",
+      "variant": "examples_and_groups",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Classic 3\u00d73\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing O | O | . is not yet a win: . is empty.\n- Placing O in that empty cell makes O | O | O. That is 3 of your marks in one row, so you win if no mark is removed.\n- A row containing X | O | O is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:O |  5:O |  6:.\n 7:. |  8:. |  9:X\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3\n4, 5, 6\n7, 8, 9\n1, 4, 7\n2, 5, 8\n3, 6, 9\n1, 5, 9\n3, 5, 7\n\nLegal squares: 3, 6, 7, 8.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "3",
+                "6",
+                "7",
+                "8"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        6
+      ],
+      "random_baseline": 0.25,
+      "legal": true,
+      "success": true,
+      "response": {
+        "reaction": "Nice move, O! I'll claim column 6 too!",
+        "square": "6"
+      },
+      "square": 6,
+      "seconds": 5.256
+    },
+    {
+      "case": "vanishing_block_o",
+      "variant": "rules_broad_schema",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Vanishing 3\u00d73\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- Each player keeps at most three marks. After placing a fourth mark, remove that player's oldest mark BEFORE checking for a win.\n- The cell must be empty before placing; you cannot choose the occupied cell that will disappear on this turn.\nX's marks, oldest to newest: 2, 5, 9.\nO's marks, oldest to newest: 4, 7, 8.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:. |  2:X |  3:.\n 4:O |  5:X |  6:.\n 7:O |  8:O |  9:X\n\nLegal squares: 1, 3, 6.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        1
+      ],
+      "random_baseline": 0.1111111111111111,
+      "legal": true,
+      "success": true,
+      "response": {
+        "reaction": "Nice start, X! I'll block your row.",
+        "square": "1"
+      },
+      "square": 1,
+      "seconds": 6.796
+    },
+    {
+      "case": "vanishing_block_o",
+      "variant": "rules_only",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Vanishing 3\u00d73\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- Each player keeps at most three marks. After placing a fourth mark, remove that player's oldest mark BEFORE checking for a win.\n- The cell must be empty before placing; you cannot choose the occupied cell that will disappear on this turn.\nX's marks, oldest to newest: 2, 5, 9.\nO's marks, oldest to newest: 4, 7, 8.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:. |  2:X |  3:.\n 4:O |  5:X |  6:.\n 7:O |  8:O |  9:X\n\nLegal squares: 1, 3, 6.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "3",
+                "6"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        1
+      ],
+      "random_baseline": 0.3333333333333333,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice move, X! I'll claim column 6!",
+        "square": "6"
+      },
+      "square": 6,
+      "seconds": 6.315
+    },
+    {
+      "case": "vanishing_block_o",
+      "variant": "examples_and_groups",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Vanishing 3\u00d73\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- Each player keeps at most three marks. After placing a fourth mark, remove that player's oldest mark BEFORE checking for a win.\n- The cell must be empty before placing; you cannot choose the occupied cell that will disappear on this turn.\nX's marks, oldest to newest: 2, 5, 9.\nO's marks, oldest to newest: 4, 7, 8.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing O | O | . is not yet a win: . is empty.\n- Placing O in that empty cell makes O | O | O. That is 3 of your marks in one row, so you win if no mark is removed.\n- A row containing X | O | O is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n- Removal example: your marks are on squares 1, 2, 5, oldest first. Placing on empty square 3 removes square 1. You now occupy 2, 5, 3. You do NOT win the top row, because square 1 is empty again.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:. |  2:X |  3:.\n 4:O |  5:X |  6:.\n 7:O |  8:O |  9:X\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3\n4, 5, 6\n7, 8, 9\n1, 4, 7\n2, 5, 8\n3, 6, 9\n1, 5, 9\n3, 5, 7\n\nLegal squares: 1, 3, 6.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "3",
+                "6"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        1
+      ],
+      "random_baseline": 0.3333333333333333,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, X! I'll block your diagonal.",
+        "square": "3"
+      },
+      "square": 3,
+      "seconds": 4.669
+    },
+    {
+      "case": "vanishing_block_o",
+      "variant": "current",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. First look for a legal move that wins this turn. If there is no winning move, try to prevent your opponent winning next turn. Otherwise choose a move that helps complete a winning group. In vanishing mode, account for the oldest mark being removed. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Vanishing 3\u00d73\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- Each player keeps at most three marks. After placing a fourth mark, remove that player's oldest mark BEFORE checking for a win.\n- The cell must be empty before placing; you cannot choose the occupied cell that will disappear on this turn.\nX's marks, oldest to newest: 2, 5, 9.\nO's marks, oldest to newest: 4, 7, 8.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing O | O | . is not yet a win: . is empty.\n- Placing O in that empty cell makes O | O | O. That is 3 of your marks in one row, so you win if no mark is removed.\n- A row containing X | O | O is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n- Removal example: your marks are on squares 1, 2, 5, oldest first. Placing on empty square 3 removes square 1. You now occupy 2, 5, 3. You do NOT win the top row, because square 1 is empty again.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:. |  2:X |  3:.\n 4:O |  5:X |  6:.\n 7:O |  8:O |  9:X\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3\n4, 5, 6\n7, 8, 9\n1, 4, 7\n2, 5, 8\n3, 6, 9\n1, 5, 9\n3, 5, 7\n\nLegal squares: 1, 3, 6.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "3",
+                "6"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        1
+      ],
+      "random_baseline": 0.3333333333333333,
+      "legal": true,
+      "success": true,
+      "response": {
+        "reaction": "Nice start, X! I'll block your row.",
+        "square": "1"
+      },
+      "square": 1,
+      "seconds": 6.593
+    },
+    {
+      "case": "classic_win_x_rotated",
+      "variant": "rules_only",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Classic 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:. |  2:O |  3:X\n 4:. |  5:O |  6:X\n 7:. |  8:. |  9:.\n\nLegal squares: 1, 4, 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "4",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        9
+      ],
+      "random_baseline": 0.2,
+      "legal": true,
+      "success": true,
+      "response": {
+        "reaction": "Nice start, O! I'll claim the corner.",
+        "square": "9"
+      },
+      "square": 9,
+      "seconds": 3.994
+    },
+    {
+      "case": "classic_win_x_rotated",
+      "variant": "examples_and_groups",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Classic 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing X | X | . is not yet a win: . is empty.\n- Placing X in that empty cell makes X | X | X. That is 3 of your marks in one row, so you win if no mark is removed.\n- A row containing O | X | X is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:. |  2:O |  3:X\n 4:. |  5:O |  6:X\n 7:. |  8:. |  9:.\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3\n4, 5, 6\n7, 8, 9\n1, 4, 7\n2, 5, 8\n3, 6, 9\n1, 5, 9\n3, 5, 7\n\nLegal squares: 1, 4, 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "4",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        9
+      ],
+      "random_baseline": 0.2,
+      "legal": true,
+      "success": false,
+      "response": {
+        "square": "4",
+        "reaction": "Nice start, O! I'm ready to claim row 4!"
+      },
+      "square": 4,
+      "seconds": 4.026
+    },
+    {
+      "case": "classic_win_x_rotated",
+      "variant": "current",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. First look for a legal move that wins this turn. If there is no winning move, try to prevent your opponent winning next turn. Otherwise choose a move that helps complete a winning group. In vanishing mode, account for the oldest mark being removed. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Classic 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing X | X | . is not yet a win: . is empty.\n- Placing X in that empty cell makes X | X | X. That is 3 of your marks in one row, so you win if no mark is removed.\n- A row containing O | X | X is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:. |  2:O |  3:X\n 4:. |  5:O |  6:X\n 7:. |  8:. |  9:.\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3\n4, 5, 6\n7, 8, 9\n1, 4, 7\n2, 5, 8\n3, 6, 9\n1, 5, 9\n3, 5, 7\n\nLegal squares: 1, 4, 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "4",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        9
+      ],
+      "random_baseline": 0.2,
+      "legal": true,
+      "success": true,
+      "response": {
+        "reaction": "Nice move, O! I'm taking the corner!",
+        "square": "9"
+      },
+      "square": 9,
+      "seconds": 7.021
+    },
+    {
+      "case": "classic_win_x_rotated",
+      "variant": "rules_broad_schema",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Classic 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:. |  2:O |  3:X\n 4:. |  5:O |  6:X\n 7:. |  8:. |  9:.\n\nLegal squares: 1, 4, 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        9
+      ],
+      "random_baseline": 0.1111111111111111,
+      "legal": false,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, O! I'm ready to counter!",
+        "square": "5"
+      },
+      "square": 5,
+      "seconds": 6.004
+    },
+    {
+      "case": "vanishing_win_x",
+      "variant": "examples_and_groups",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Vanishing 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- Each player keeps at most three marks. After placing a fourth mark, remove that player's oldest mark BEFORE checking for a win.\n- The cell must be empty before placing; you cannot choose the occupied cell that will disappear on this turn.\nX's marks, oldest to newest: 1, 2.\nO's marks, oldest to newest: 4, 5.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing X | X | . is not yet a win: . is empty.\n- Placing X in that empty cell makes X | X | X. That is 3 of your marks in one row, so you win if no mark is removed.\n- A row containing O | X | X is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n- Removal example: your marks are on squares 1, 2, 5, oldest first. Placing on empty square 3 removes square 1. You now occupy 2, 5, 3. You do NOT win the top row, because square 1 is empty again.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:O |  5:O |  6:.\n 7:. |  8:. |  9:.\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3\n4, 5, 6\n7, 8, 9\n1, 4, 7\n2, 5, 8\n3, 6, 9\n1, 5, 9\n3, 5, 7\n\nLegal squares: 3, 6, 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "3",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        3
+      ],
+      "random_baseline": 0.2,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, O! I'll block your diagonal.",
+        "square": "6"
+      },
+      "square": 6,
+      "seconds": 5.641
+    },
+    {
+      "case": "vanishing_win_x",
+      "variant": "current",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. First look for a legal move that wins this turn. If there is no winning move, try to prevent your opponent winning next turn. Otherwise choose a move that helps complete a winning group. In vanishing mode, account for the oldest mark being removed. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Vanishing 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- Each player keeps at most three marks. After placing a fourth mark, remove that player's oldest mark BEFORE checking for a win.\n- The cell must be empty before placing; you cannot choose the occupied cell that will disappear on this turn.\nX's marks, oldest to newest: 1, 2.\nO's marks, oldest to newest: 4, 5.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing X | X | . is not yet a win: . is empty.\n- Placing X in that empty cell makes X | X | X. That is 3 of your marks in one row, so you win if no mark is removed.\n- A row containing O | X | X is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n- Removal example: your marks are on squares 1, 2, 5, oldest first. Placing on empty square 3 removes square 1. You now occupy 2, 5, 3. You do NOT win the top row, because square 1 is empty again.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:O |  5:O |  6:.\n 7:. |  8:. |  9:.\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3\n4, 5, 6\n7, 8, 9\n1, 4, 7\n2, 5, 8\n3, 6, 9\n1, 5, 9\n3, 5, 7\n\nLegal squares: 3, 6, 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "3",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        3
+      ],
+      "random_baseline": 0.2,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, but I'll block your row!",
+        "square": "7"
+      },
+      "square": 7,
+      "seconds": 7.087
+    },
+    {
+      "case": "vanishing_win_x",
+      "variant": "rules_broad_schema",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Vanishing 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- Each player keeps at most three marks. After placing a fourth mark, remove that player's oldest mark BEFORE checking for a win.\n- The cell must be empty before placing; you cannot choose the occupied cell that will disappear on this turn.\nX's marks, oldest to newest: 1, 2.\nO's marks, oldest to newest: 4, 5.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:O |  5:O |  6:.\n 7:. |  8:. |  9:.\n\nLegal squares: 3, 6, 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        3
+      ],
+      "random_baseline": 0.1111111111111111,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, O! I'll block your row.",
+        "square": "7"
+      },
+      "square": 7,
+      "seconds": 7.036
+    },
+    {
+      "case": "vanishing_win_x",
+      "variant": "rules_only",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Vanishing 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- Each player keeps at most three marks. After placing a fourth mark, remove that player's oldest mark BEFORE checking for a win.\n- The cell must be empty before placing; you cannot choose the occupied cell that will disappear on this turn.\nX's marks, oldest to newest: 1, 2.\nO's marks, oldest to newest: 4, 5.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:O |  5:O |  6:.\n 7:. |  8:. |  9:.\n\nLegal squares: 3, 6, 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "3",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        3
+      ],
+      "random_baseline": 0.2,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, O! I'll block your row.",
+        "square": "6"
+      },
+      "square": 6,
+      "seconds": 6.941
+    },
+    {
+      "case": "vanishing_remove_then_block_x_rotated",
+      "variant": "current",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. First look for a legal move that wins this turn. If there is no winning move, try to prevent your opponent winning next turn. Otherwise choose a move that helps complete a winning group. In vanishing mode, account for the oldest mark being removed. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Vanishing 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- Each player keeps at most three marks. After placing a fourth mark, remove that player's oldest mark BEFORE checking for a win.\n- The cell must be empty before placing; you cannot choose the occupied cell that will disappear on this turn.\nX's marks, oldest to newest: 3, 6, 5.\nO's marks, oldest to newest: 2, 1, 4.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing X | X | . is not yet a win: . is empty.\n- Placing X in that empty cell makes X | X | X. That is 3 of your marks in one row, so you win if no mark is removed.\n- A row containing O | X | X is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n- Removal example: your marks are on squares 1, 2, 5, oldest first. Placing on empty square 3 removes square 1. You now occupy 2, 5, 3. You do NOT win the top row, because square 1 is empty again.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:O |  2:O |  3:X\n 4:O |  5:X |  6:X\n 7:. |  8:. |  9:.\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3\n4, 5, 6\n7, 8, 9\n1, 4, 7\n2, 5, 8\n3, 6, 9\n1, 5, 9\n3, 5, 7\n\nLegal squares: 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        7
+      ],
+      "random_baseline": 0.3333333333333333,
+      "legal": true,
+      "success": true,
+      "response": {
+        "reaction": "Nice start, but I'll claim the corner!",
+        "square": "7"
+      },
+      "square": 7,
+      "seconds": 5.876
+    },
+    {
+      "case": "vanishing_remove_then_block_x_rotated",
+      "variant": "rules_broad_schema",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Vanishing 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- Each player keeps at most three marks. After placing a fourth mark, remove that player's oldest mark BEFORE checking for a win.\n- The cell must be empty before placing; you cannot choose the occupied cell that will disappear on this turn.\nX's marks, oldest to newest: 3, 6, 5.\nO's marks, oldest to newest: 2, 1, 4.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:O |  2:O |  3:X\n 4:O |  5:X |  6:X\n 7:. |  8:. |  9:.\n\nLegal squares: 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        7
+      ],
+      "random_baseline": 0.1111111111111111,
+      "legal": true,
+      "success": true,
+      "response": {
+        "reaction": "Nice start, O! I'll claim row 7!",
+        "square": "7"
+      },
+      "square": 7,
+      "seconds": 5.753
+    },
+    {
+      "case": "vanishing_remove_then_block_x_rotated",
+      "variant": "rules_only",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Vanishing 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- Each player keeps at most three marks. After placing a fourth mark, remove that player's oldest mark BEFORE checking for a win.\n- The cell must be empty before placing; you cannot choose the occupied cell that will disappear on this turn.\nX's marks, oldest to newest: 3, 6, 5.\nO's marks, oldest to newest: 2, 1, 4.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:O |  2:O |  3:X\n 4:O |  5:X |  6:X\n 7:. |  8:. |  9:.\n\nLegal squares: 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        7
+      ],
+      "random_baseline": 0.3333333333333333,
+      "legal": true,
+      "success": true,
+      "response": {
+        "reaction": "Nice start, O! I'll claim row 1!",
+        "square": "7"
+      },
+      "square": 7,
+      "seconds": 4.328
+    },
+    {
+      "case": "vanishing_remove_then_block_x_rotated",
+      "variant": "examples_and_groups",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Vanishing 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- Each player keeps at most three marks. After placing a fourth mark, remove that player's oldest mark BEFORE checking for a win.\n- The cell must be empty before placing; you cannot choose the occupied cell that will disappear on this turn.\nX's marks, oldest to newest: 3, 6, 5.\nO's marks, oldest to newest: 2, 1, 4.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing X | X | . is not yet a win: . is empty.\n- Placing X in that empty cell makes X | X | X. That is 3 of your marks in one row, so you win if no mark is removed.\n- A row containing O | X | X is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n- Removal example: your marks are on squares 1, 2, 5, oldest first. Placing on empty square 3 removes square 1. You now occupy 2, 5, 3. You do NOT win the top row, because square 1 is empty again.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:O |  2:O |  3:X\n 4:O |  5:X |  6:X\n 7:. |  8:. |  9:.\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3\n4, 5, 6\n7, 8, 9\n1, 4, 7\n2, 5, 8\n3, 6, 9\n1, 5, 9\n3, 5, 7\n\nLegal squares: 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        7
+      ],
+      "random_baseline": 0.3333333333333333,
+      "legal": true,
+      "success": true,
+      "response": {
+        "reaction": "Nice start, O! I'll block your escape.",
+        "square": "7"
+      },
+      "square": 7,
+      "seconds": 5.905
+    },
+    {
+      "case": "4x4_win_x",
+      "variant": "rules_broad_schema",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Big 4\u00d74\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 4 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nCURRENT BOARD (4 rows by 4 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:X |  4:.\n 5:O |  6:O |  7:. |  8:.\n 9:. | 10:O | 11:. | 12:.\n13:. | 14:. | 15:. | 16:.\n\nLegal squares: 4, 7, 8, 9, 11, 12, 13, 14, 15, 16.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        4
+      ],
+      "random_baseline": 0.0625,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, O! I'm ready to counter!",
+        "square": "9"
+      },
+      "square": 9,
+      "seconds": 4.42
+    },
+    {
+      "case": "4x4_win_x",
+      "variant": "rules_only",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Big 4\u00d74\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 4 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nCURRENT BOARD (4 rows by 4 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:X |  4:.\n 5:O |  6:O |  7:. |  8:.\n 9:. | 10:O | 11:. | 12:.\n13:. | 14:. | 15:. | 16:.\n\nLegal squares: 4, 7, 8, 9, 11, 12, 13, 14, 15, 16.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "4",
+                "7",
+                "8",
+                "9",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        4
+      ],
+      "random_baseline": 0.1,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, O! I'm ready to counter!",
+        "square": "9"
+      },
+      "square": 9,
+      "seconds": 3.82
+    },
+    {
+      "case": "4x4_win_x",
+      "variant": "examples_and_groups",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Big 4\u00d74\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 4 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing X | X | X | . is not yet a win: . is empty.\n- Placing X in that empty cell makes X | X | X | X. That is 4 of your marks in one row, so you win if no mark is removed.\n- A row containing O | X | X | X is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n\nCURRENT BOARD (4 rows by 4 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:X |  4:.\n 5:O |  6:O |  7:. |  8:.\n 9:. | 10:O | 11:. | 12:.\n13:. | 14:. | 15:. | 16:.\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3, 4\n5, 6, 7, 8\n9, 10, 11, 12\n13, 14, 15, 16\n1, 5, 9, 13\n2, 6, 10, 14\n3, 7, 11, 15\n4, 8, 12, 16\n1, 6, 11, 16\n4, 7, 10, 13\n\nLegal squares: 4, 7, 8, 9, 11, 12, 13, 14, 15, 16.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "4",
+                "7",
+                "8",
+                "9",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        4
+      ],
+      "random_baseline": 0.1,
+      "legal": true,
+      "success": false,
+      "response": {
+        "square": "7",
+        "reaction": "Nice start, O! I'll block your diagonal."
+      },
+      "square": 7,
+      "seconds": 3.773
+    },
+    {
+      "case": "4x4_win_x",
+      "variant": "current",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. First look for a legal move that wins this turn. If there is no winning move, try to prevent your opponent winning next turn. Otherwise choose a move that helps complete a winning group. In vanishing mode, account for the oldest mark being removed. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Big 4\u00d74\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 4 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing X | X | X | . is not yet a win: . is empty.\n- Placing X in that empty cell makes X | X | X | X. That is 4 of your marks in one row, so you win if no mark is removed.\n- A row containing O | X | X | X is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n\nCURRENT BOARD (4 rows by 4 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:X |  4:.\n 5:O |  6:O |  7:. |  8:.\n 9:. | 10:O | 11:. | 12:.\n13:. | 14:. | 15:. | 16:.\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3, 4\n5, 6, 7, 8\n9, 10, 11, 12\n13, 14, 15, 16\n1, 5, 9, 13\n2, 6, 10, 14\n3, 7, 11, 15\n4, 8, 12, 16\n1, 6, 11, 16\n4, 7, 10, 13\n\nLegal squares: 4, 7, 8, 9, 11, 12, 13, 14, 15, 16.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "4",
+                "7",
+                "8",
+                "9",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        4
+      ],
+      "random_baseline": 0.1,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, O! I'm ready to counter!",
+        "square": "9"
+      },
+      "square": 9,
+      "seconds": 6.685
+    },
+    {
+      "case": "4x4_block_o",
+      "variant": "rules_only",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Big 4\u00d74\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 4 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nCURRENT BOARD (4 rows by 4 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:X |  4:.\n 5:O |  6:O |  7:. |  8:.\n 9:. | 10:. | 11:. | 12:.\n13:. | 14:. | 15:. | 16:.\n\nLegal squares: 4, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "4",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        4
+      ],
+      "random_baseline": 0.09090909090909091,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice spot, O! I'll claim it too!",
+        "square": "7"
+      },
+      "square": 7,
+      "seconds": 5.338
+    },
+    {
+      "case": "4x4_block_o",
+      "variant": "examples_and_groups",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Big 4\u00d74\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 4 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing O | O | O | . is not yet a win: . is empty.\n- Placing O in that empty cell makes O | O | O | O. That is 4 of your marks in one row, so you win if no mark is removed.\n- A row containing X | O | O | O is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n\nCURRENT BOARD (4 rows by 4 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:X |  4:.\n 5:O |  6:O |  7:. |  8:.\n 9:. | 10:. | 11:. | 12:.\n13:. | 14:. | 15:. | 16:.\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3, 4\n5, 6, 7, 8\n9, 10, 11, 12\n13, 14, 15, 16\n1, 5, 9, 13\n2, 6, 10, 14\n3, 7, 11, 15\n4, 8, 12, 16\n1, 6, 11, 16\n4, 7, 10, 13\n\nLegal squares: 4, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "4",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        4
+      ],
+      "random_baseline": 0.09090909090909091,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, O! I'm ready to block!",
+        "square": "9"
+      },
+      "square": 9,
+      "seconds": 5.293
+    },
+    {
+      "case": "4x4_block_o",
+      "variant": "current",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. First look for a legal move that wins this turn. If there is no winning move, try to prevent your opponent winning next turn. Otherwise choose a move that helps complete a winning group. In vanishing mode, account for the oldest mark being removed. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Big 4\u00d74\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 4 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing O | O | O | . is not yet a win: . is empty.\n- Placing O in that empty cell makes O | O | O | O. That is 4 of your marks in one row, so you win if no mark is removed.\n- A row containing X | O | O | O is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n\nCURRENT BOARD (4 rows by 4 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:X |  4:.\n 5:O |  6:O |  7:. |  8:.\n 9:. | 10:. | 11:. | 12:.\n13:. | 14:. | 15:. | 16:.\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3, 4\n5, 6, 7, 8\n9, 10, 11, 12\n13, 14, 15, 16\n1, 5, 9, 13\n2, 6, 10, 14\n3, 7, 11, 15\n4, 8, 12, 16\n1, 6, 11, 16\n4, 7, 10, 13\n\nLegal squares: 4, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "4",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        4
+      ],
+      "random_baseline": 0.09090909090909091,
+      "legal": true,
+      "success": false,
+      "response": {
+        "square": "9",
+        "reaction": "Nice start, O! I'm ready to block!"
+      },
+      "square": 9,
+      "seconds": 4.002
+    },
+    {
+      "case": "4x4_block_o",
+      "variant": "rules_broad_schema",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Big 4\u00d74\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 4 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nCURRENT BOARD (4 rows by 4 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:X |  4:.\n 5:O |  6:O |  7:. |  8:.\n 9:. | 10:. | 11:. | 12:.\n13:. | 14:. | 15:. | 16:.\n\nLegal squares: 4, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        4
+      ],
+      "random_baseline": 0.0625,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, but I'm ready to block!",
+        "square": "7"
+      },
+      "square": 7,
+      "seconds": 4.903
+    },
+    {
+      "case": "classic_win_x",
+      "variant": "examples_and_groups",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Classic 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing X | X | . is not yet a win: . is empty.\n- Placing X in that empty cell makes X | X | X. That is 3 of your marks in one row, so you win if no mark is removed.\n- A row containing O | X | X is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:O |  5:O |  6:.\n 7:. |  8:. |  9:.\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3\n4, 5, 6\n7, 8, 9\n1, 4, 7\n2, 5, 8\n3, 6, 9\n1, 5, 9\n3, 5, 7\n\nLegal squares: 3, 6, 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "3",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        3
+      ],
+      "random_baseline": 0.2,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice move, O! I'll claim the center.",
+        "square": "6"
+      },
+      "square": 6,
+      "seconds": 5.27
+    },
+    {
+      "case": "classic_win_x",
+      "variant": "current",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. First look for a legal move that wins this turn. If there is no winning move, try to prevent your opponent winning next turn. Otherwise choose a move that helps complete a winning group. In vanishing mode, account for the oldest mark being removed. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Classic 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing X | X | . is not yet a win: . is empty.\n- Placing X in that empty cell makes X | X | X. That is 3 of your marks in one row, so you win if no mark is removed.\n- A row containing O | X | X is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:O |  5:O |  6:.\n 7:. |  8:. |  9:.\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3\n4, 5, 6\n7, 8, 9\n1, 4, 7\n2, 5, 8\n3, 6, 9\n1, 5, 9\n3, 5, 7\n\nLegal squares: 3, 6, 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "3",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        3
+      ],
+      "random_baseline": 0.2,
+      "legal": true,
+      "success": false,
+      "response": {
+        "square": "9",
+        "reaction": "Nice move, O! I'm taking the corner."
+      },
+      "square": 9,
+      "seconds": 5.837
+    },
+    {
+      "case": "classic_win_x",
+      "variant": "rules_broad_schema",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Classic 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:O |  5:O |  6:.\n 7:. |  8:. |  9:.\n\nLegal squares: 3, 6, 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        3
+      ],
+      "random_baseline": 0.1111111111111111,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, but I'll claim the corner!",
+        "square": "9"
+      },
+      "square": 9,
+      "seconds": 5.629
+    },
+    {
+      "case": "classic_win_x",
+      "variant": "rules_only",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Classic 3\u00d73\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:O |  5:O |  6:.\n 7:. |  8:. |  9:.\n\nLegal squares: 3, 6, 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "3",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        3
+      ],
+      "random_baseline": 0.2,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, O! I'll block your row.",
+        "square": "6"
+      },
+      "square": 6,
+      "seconds": 4.998
+    },
+    {
+      "case": "classic_block_o",
+      "variant": "current",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. First look for a legal move that wins this turn. If there is no winning move, try to prevent your opponent winning next turn. Otherwise choose a move that helps complete a winning group. In vanishing mode, account for the oldest mark being removed. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Classic 3\u00d73\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing O | O | . is not yet a win: . is empty.\n- Placing O in that empty cell makes O | O | O. That is 3 of your marks in one row, so you win if no mark is removed.\n- A row containing X | O | O is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:. |  5:O |  6:.\n 7:. |  8:. |  9:.\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3\n4, 5, 6\n7, 8, 9\n1, 4, 7\n2, 5, 8\n3, 6, 9\n1, 5, 9\n3, 5, 7\n\nLegal squares: 3, 4, 6, 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "3",
+                "4",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        3
+      ],
+      "random_baseline": 0.16666666666666666,
+      "legal": true,
+      "success": false,
+      "response": {
+        "square": "9",
+        "reaction": "Nice move, O! I'll take the win!"
+      },
+      "square": 9,
+      "seconds": 4.884
+    },
+    {
+      "case": "classic_block_o",
+      "variant": "rules_broad_schema",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Classic 3\u00d73\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:. |  5:O |  6:.\n 7:. |  8:. |  9:.\n\nLegal squares: 3, 4, 6, 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        3
+      ],
+      "random_baseline": 0.1111111111111111,
+      "legal": false,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, X! I'm ready to block.",
+        "square": "5"
+      },
+      "square": 5,
+      "seconds": 4.351
+    },
+    {
+      "case": "classic_block_o",
+      "variant": "rules_only",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Classic 3\u00d73\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:. |  5:O |  6:.\n 7:. |  8:. |  9:.\n\nLegal squares: 3, 4, 6, 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "3",
+                "4",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        3
+      ],
+      "random_baseline": 0.16666666666666666,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, X! I'll block your row.",
+        "square": "4"
+      },
+      "square": 4,
+      "seconds": 7.772
+    },
+    {
+      "case": "classic_block_o",
+      "variant": "examples_and_groups",
+      "task": "prevent_immediate_loss",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Classic 3\u00d73\nYou play O. Your opponent plays X.\nIt is O's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 3 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing O | O | . is not yet a win: . is empty.\n- Placing O in that empty cell makes O | O | O. That is 3 of your marks in one row, so you win if no mark is removed.\n- A row containing X | O | O is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n\nCURRENT BOARD (3 rows by 3 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:X |  2:X |  3:.\n 4:. |  5:O |  6:.\n 7:. |  8:. |  9:.\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3\n4, 5, 6\n7, 8, 9\n1, 4, 7\n2, 5, 8\n3, 6, 9\n1, 5, 9\n3, 5, 7\n\nLegal squares: 3, 4, 6, 7, 8, 9.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "3",
+                "4",
+                "6",
+                "7",
+                "8",
+                "9"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        3
+      ],
+      "random_baseline": 0.16666666666666666,
+      "legal": true,
+      "success": false,
+      "response": {
+        "square": "4",
+        "reaction": "Nice start, X! I'll block your row."
+      },
+      "square": 4,
+      "seconds": 6.315
+    },
+    {
+      "case": "4x4_win_x_rotated",
+      "variant": "rules_broad_schema",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Big 4\u00d74\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 4 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nCURRENT BOARD (4 rows by 4 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:. |  2:. |  3:O |  4:X\n 5:. |  6:O |  7:O |  8:X\n 9:. | 10:. | 11:. | 12:X\n13:. | 14:. | 15:. | 16:.\n\nLegal squares: 1, 2, 5, 9, 10, 11, 13, 14, 15, 16.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        16
+      ],
+      "random_baseline": 0.0625,
+      "legal": true,
+      "success": false,
+      "response": {
+        "square": "10",
+        "reaction": "Nice start, O! I'm ready to counter!"
+      },
+      "square": 10,
+      "seconds": 5.938
+    },
+    {
+      "case": "4x4_win_x_rotated",
+      "variant": "rules_only",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Big 4\u00d74\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 4 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nCURRENT BOARD (4 rows by 4 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:. |  2:. |  3:O |  4:X\n 5:. |  6:O |  7:O |  8:X\n 9:. | 10:. | 11:. | 12:X\n13:. | 14:. | 15:. | 16:.\n\nLegal squares: 1, 2, 5, 9, 10, 11, 13, 14, 15, 16.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "2",
+                "5",
+                "9",
+                "10",
+                "11",
+                "13",
+                "14",
+                "15",
+                "16"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        16
+      ],
+      "random_baseline": 0.1,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, O! I'm ready to counter!",
+        "square": "10"
+      },
+      "square": 10,
+      "seconds": 4.184
+    },
+    {
+      "case": "4x4_win_x_rotated",
+      "variant": "examples_and_groups",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Big 4\u00d74\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 4 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing X | X | X | . is not yet a win: . is empty.\n- Placing X in that empty cell makes X | X | X | X. That is 4 of your marks in one row, so you win if no mark is removed.\n- A row containing O | X | X | X is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n\nCURRENT BOARD (4 rows by 4 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:. |  2:. |  3:O |  4:X\n 5:. |  6:O |  7:O |  8:X\n 9:. | 10:. | 11:. | 12:X\n13:. | 14:. | 15:. | 16:.\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3, 4\n5, 6, 7, 8\n9, 10, 11, 12\n13, 14, 15, 16\n1, 5, 9, 13\n2, 6, 10, 14\n3, 7, 11, 15\n4, 8, 12, 16\n1, 6, 11, 16\n4, 7, 10, 13\n\nLegal squares: 1, 2, 5, 9, 10, 11, 13, 14, 15, 16.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "2",
+                "5",
+                "9",
+                "10",
+                "11",
+                "13",
+                "14",
+                "15",
+                "16"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        16
+      ],
+      "random_baseline": 0.1,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, O! I'm ready to counter!",
+        "square": "10"
+      },
+      "square": 10,
+      "seconds": 5.119
+    },
+    {
+      "case": "4x4_win_x_rotated",
+      "variant": "current",
+      "task": "immediate_win",
+      "inputs": {
+        "instructions": "You are playing tic-tac-toe. Your objective is to win; if you cannot win, try to draw. Read the rules, your mark, and the current board carefully. First look for a legal move that wins this turn. If there is no winning move, try to prevent your opponent winning next turn. Otherwise choose a move that helps complete a winning group. In vanishing mode, account for the oldest mark being removed. Choose the best move yourself from the legal squares. Return its square number as a string in the square field. After choosing, add a friendly remark of at most eight words in the reaction field. Focus on the move first.",
+        "prompt": "Game: Big 4\u00d74\nYou play X. Your opponent plays O.\nIt is X's turn.\nRules:\n- X moves first. Players alternate placing one mark in an empty cell.\n- You cannot replace an occupied cell.\n- The first player with 4 of their own marks filling one entire row, one entire column, or either corner-to-corner diagonal wins.\n- Marks from different rows, columns, or diagonals do not combine into a win.\n- If the board fills without a winner, the game is a draw.\n\nRule examples (illustrations only; these are NOT the current board):\n- A row containing X | X | X | . is not yet a win: . is empty.\n- Placing X in that empty cell makes X | X | X | X. That is 4 of your marks in one row, so you win if no mark is removed.\n- A row containing O | X | X | X is not a win for either player: every cell must have the SAME mark.\n- A square number is just an address. Only X or O counts toward a win.\n\nCURRENT BOARD (4 rows by 4 columns):\nEach cell is square:contents. X and O are occupied; . means empty.\nSquare numbers run left to right, then top to bottom.\n 1:. |  2:. |  3:O |  4:X\n 5:. |  6:O |  7:O |  8:X\n 9:. | 10:. | 11:. | 12:X\n13:. | 14:. | 15:. | 16:.\n\nWinning groups of square numbers (the same for both players):\n1, 2, 3, 4\n5, 6, 7, 8\n9, 10, 11, 12\n13, 14, 15, 16\n1, 5, 9, 13\n2, 6, 10, 14\n3, 7, 11, 15\n4, 8, 12, 16\n1, 6, 11, 16\n4, 7, 10, 13\n\nLegal squares: 1, 2, 5, 9, 10, 11, 13, 14, 15, 16.",
+        "schema": {
+          "title": "Move",
+          "type": "object",
+          "properties": {
+            "square": {
+              "type": "string",
+              "description": "Choose a legal square",
+              "enum": [
+                "1",
+                "2",
+                "5",
+                "9",
+                "10",
+                "11",
+                "13",
+                "14",
+                "15",
+                "16"
+              ]
+            },
+            "reaction": {
+              "type": "string",
+              "description": "Playful remark consistent with your chosen move, at most eight words"
+            }
+          },
+          "required": [
+            "square",
+            "reaction"
+          ],
+          "x-order": [
+            "square",
+            "reaction"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "acceptable_squares": [
+        16
+      ],
+      "random_baseline": 0.1,
+      "legal": true,
+      "success": false,
+      "response": {
+        "reaction": "Nice start, O! I'm ready to counter!",
+        "square": "10"
+      },
+      "square": 10,
+      "seconds": 5.077
+    }
+  ]
+}
