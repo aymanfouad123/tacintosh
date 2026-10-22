@@ -145,7 +145,7 @@ class GameScreen(Screen[None]):
             with Center(id="board-wrap"), Container(id="board"):
                 for index in range(len(self.game.board)):
                     yield Cell(index)
-            keys = "1–9 / a–g" if self.mode.size == 4 else "1–9"
+            keys = "1–9 / a–g (10–16)" if self.mode.size == 4 else "1–9"
             yield Static(f"arrows select · enter / {keys} place", id="hint")
             yield Static(id="reaction", markup=False)
             yield LoadingIndicator(id="thinking")
@@ -186,7 +186,10 @@ class GameScreen(Screen[None]):
             cell.set_class(mark == self.ai, "model")
             cell.set_class(i in latest, "latest")
             cell.set_class(mark != "." and i == game.next_to_vanish(mark), "oldest")
-            cell.update(mark if mark != "." else str(i + 1))
+            label = str(i + 1)
+            if game.size == 4 and i >= 9:
+                label += f" ({chr(ord('a') + i - 9)})"
+            cell.update(mark if mark != "." else label)
 
         if result == "draw":
             status = "Draw."
