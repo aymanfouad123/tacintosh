@@ -2,28 +2,42 @@
 
 tic-tac-toe in the terminal, powered by apple foundation models.
 
+turns out your mac comes with a [local 3b-parameter language model](https://developer.apple.com/documentation/foundationmodels) that you can try by running `fm`! i wanted to see how it would hold up at tic-tac-toe, so i built a way to play against it.
+
 ![Tacintosh terminal gameplay demo](tacintosh.gif)
 
-needs an apple intelligence–compatible mac, macos 26+, python 3.12+, and xcode set up for `apple-fm-sdk`.
+## to try it
+
+you’ll need an apple intelligence–compatible mac, macos 26+, python 3.12+, xcode set up for `apple-fm-sdk`, and `uv`.
+
+to check out `fm` on your mac:
+
+```bash
+fm --help
+```
+
+then run tacintosh:
 
 ```bash
 uv sync
 uv run tacintosh
 ```
 
-the model gets a structured json board and picks its own move. the code only enforces legality, wins, and vanishing-mode removal — no win/block hints.
+the model gets a structured json board and picks its own move.
+
+the code only enforces legality, wins, and vanishing-mode removal — no win/block hints.
+
+the sdk connects directly to the on-device model. no api key or separate model server needed.
 
 ## modes
 
-| mode | what it is |
-| --- | --- |
-| classic 3×3 | standard tic-tac-toe |
-| big 4×4 | four in a row wins |
+| mode          | what it is                                                            |
+| ------------- | --------------------------------------------------------------------- |
+| classic 3×3   | standard tic-tac-toe                                                  |
+| big 4×4       | four in a row wins                                                    |
 | vanishing 3×3 | each player keeps only their three newest marks (no full-board draws) |
 
 in vanishing mode, place on an empty square first, then remove your oldest mark if you now have four. wins are checked after removal. repeated positions do not end the round, so a game can run indefinitely.
-
-pick the mode and who goes first on the start menu. the first move is random by default.
 
 ## keys
 
